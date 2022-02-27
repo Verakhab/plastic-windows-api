@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 
-router.post('/amount', function (req, res, next) {
+router.post('/', function (req, res, next) {
   const amount = [];
   req.body.forEach(el => {
     const amountGlazedWindows = el.option.glazedWindows === "Стеклопакет 1" ? el.option.widthSash * el.option.heightSash * 0.001 : el.option.glazedWindows === "Стеклопакет 2" ? el.option.widthSash * el.option.heightSash * 0.0015 : el.option.glazedWindows === "Стеклопакет 3" ? el.option.widthSash * el.option.heightSash * 0.002 : 0;
