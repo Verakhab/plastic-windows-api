@@ -1,1 +1,1 @@
-web: yarn start
+web: DEBUG=plastic-windows-api:* yarn start
