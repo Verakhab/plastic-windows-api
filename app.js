@@ -25,7 +25,7 @@ app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
-app.use('/amount', usersRouter);
+app.use('https://evening-woodland-74034.herokuapp.com/amount', usersRouter);
 
 app.use(function(req, res, next) {
   next(createError(404));
