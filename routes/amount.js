@@ -14,11 +14,8 @@ router.post('/', function (req, res, next) {
     const amountLowTide = el.option.lowTideWidth * el.option.lowTideLength * 0.05;
     const amountSideSlopes = el.option.sideSlopesWidth * el.option.sideSlopesLength * 0.05;
     const summ = Number(amountGlazedWindows) + Number(amountProfil) + Number(amountAccessories) + Number(amountExternalLamination) + Number(amountInternalLamination) + Number(amountSill) + Number(amountSlope) + Number(amountLowTide) + Number(amountSideSlopes);
-    console.log(amountGlazedWindows, amountProfil, amountAccessories, amountExternalLamination, amountInternalLamination, amountSill, amountSlope, amountLowTide, amountSideSlopes)
-    console.log(summ);
     amount.push(Math.floor(summ));
   });
-  console.log(amount);
   res.send(amount);
 });
 
